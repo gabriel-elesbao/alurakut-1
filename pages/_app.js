@@ -1,5 +1,7 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { AlurakutStyles } from '../src/lib/alurakutCommons';
+import { useEffect } from 'react';
+import TagManager from 'react-gtm-module';
 
 const GlobalStyle = createGlobalStyle`
   /* Reset CSS */
@@ -37,6 +39,11 @@ const theme = {
 }
 
 export default function App({ Component, pageProps }) {
+  
+  useEffect(()=>{
+    TagManager.initialize({gtmId: 'GTM-PQM8TPS'})
+  },[])
+  
   return (
     <>
       <GlobalStyle />
@@ -46,3 +53,5 @@ export default function App({ Component, pageProps }) {
     </>
   )
 }
+
+
