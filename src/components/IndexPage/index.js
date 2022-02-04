@@ -1,4 +1,7 @@
 import Head from 'next/head';
+import { useEffect } from 'react';
+import TagManager from 'react-gtm-module';
+
 
 function IndexPage() {
     useEffect(()=>{
