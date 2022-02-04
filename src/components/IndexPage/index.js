@@ -1,6 +1,10 @@
 import Head from 'next/head';
 
 function IndexPage() {
+    useEffect(()=>{
+    TagManager.initialize({gtmId: 'GTM-PQM8TPS'})
+  },[])
+  
     return (
         <>
             <Head>
